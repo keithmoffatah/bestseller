@@ -12,8 +12,8 @@ A simple REST API with `/hello` endpoint deployed on Azure using Terraform modul
 
 ## Assumptions
 
-- The API is currently public to stakeholders in the Brande office and Zalando partners.
-  - In a future sprint, we will switch to a private API and whitelist the public IP addresses of both offices for access control. (Currently, the API is public because we do not have specific partner IPs to whitelist.)
+- The API is currently public, this will allow the stakeholders in the Brande office and Zalando partners to access the api
+  - In a future sprint, we will switch to an Azure App Service with a private endpoint and whitelist specific IP addresses. (Currently, the API is public because we do not have specific partner IPs to whitelist.)
 - No authentication is added for simplicity.
 - Hosted on **Azure App Service** (simple, fast, cost-effective for small scale).
 - Terraform state is local for now.
