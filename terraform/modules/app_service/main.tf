@@ -15,7 +15,6 @@ resource "azurerm_linux_web_app" "main" {
 
   site_config {
     always_on = true
-    app_command_line = "gunicorn app.app:app --bind 0.0.0.0:$PORT"
 
     application_stack {
       python_version = "3.9"

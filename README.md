@@ -52,6 +52,7 @@ A simple REST API with `/hello` endpoint deployed on Azure using Terraform modul
    terraform init
    terraform apply
    ```
+   Take note of output URL
 
 4. Deploy your app code to Azure (from project root):
 
@@ -68,7 +69,9 @@ A simple REST API with `/hello` endpoint deployed on Azure using Terraform modul
     --src-path app.zip \
     --type zip
    ```
-   Replace `<your-resource-group>` and `<your-app-service-name>` with your actual values (see Terraform output).
+   Replace values `<your-resource-group>` and `<your-app-service-name>` Use portal or Azure CLI to be certain of infra deployment destination
+   > **Note:**
+   > Make sure you zip the **contents** of the `app/` directory (not the folder itself), so that `app.py` and `requirements.txt` are at the root of the zip file. If you zip the folder itself, Azure will not be able to find your app and deployment will fail with a `ModuleNotFoundError`.
 
 5. Visit the output URL to test your API.
 
