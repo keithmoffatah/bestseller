@@ -60,10 +60,11 @@ A simple REST API with `/hello` endpoint deployed on Azure using Terraform modul
    zip -r ../app.zip .
    cd ..
    az login
-   az webapp deployment source config-zip \
-     --resource-group <your-resource-group> \
-     --name <your-app-service-name> \
-     --src app.zip
+   az webapp deploy \
+    --resource-group $RESOURCE_GROUP \
+    --name $APP_NAME \
+    --src-path app.zip \
+    --type zip
    ```
    Replace `<your-resource-group>` and `<your-app-service-name>` with your actual values (see Terraform output).
 
