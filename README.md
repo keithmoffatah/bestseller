@@ -59,6 +59,8 @@ A simple REST API with `/hello` endpoint deployed on Azure using Terraform modul
    cd app
    zip -r ../app.zip .
    cd ..
+   export APP_NAME="<your-app-service-name>"
+   export RESOURCE_GROUP="<your-resource-group>"
    az login
    az webapp deploy \
     --resource-group $RESOURCE_GROUP \
