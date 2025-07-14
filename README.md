@@ -19,7 +19,7 @@ A simple REST API with `/hello` endpoint deployed on Azure using Terraform modul
 - Terraform state is local for now.
   - In production, would use a remote backend (e.g., Azure Storage Account).
 - No CI/CD for main test, but would add GitHub Actions in the future.
-- Minimal logging added in the Flask app.
+- Logging can be viewed in xxxxxx.scm.azurewebsites.net/DebugConsole
   - In production, would integrate with Application Insights.
 
 ## Requirements
